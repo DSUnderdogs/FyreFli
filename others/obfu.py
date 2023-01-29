@@ -14,7 +14,7 @@ ________________________________________________________________________________
 ........................................................................................................................................
 '''
 
-def paramEncode(params="", charset="", encodeEqualSign=False, encodeAmpersand=False, urlDecodeInput=True, urlEncodeOutput=True,hashType="", fileInput=False, ciphername="", key=None, task=""):
+def paramEncode(params="", charset="", encodeEqualSign=False, encodeAmpersand=False, urlDecodeInput=True, urlEncodeOutput=True,hashType="", fileInput=False):
 
     equalSign = "="
     ampersand = "&"
@@ -34,46 +34,6 @@ def paramEncode(params="", charset="", encodeEqualSign=False, encodeAmpersand=Fa
         print('')
         params = buffer
 
-# If there is a Cipher Input, i.e. "cipher" is TRUE. There may/may not be any file.
-# It supports Vigenere, Caesar, Rot.
-
-    if(ciphername):
-        result = ""
-        if(ciphername == "vigenere"):
-            from vigenere import encrypt as ve, decrypt as vd, random_key as vrk
-            if(not key):
-                key = vrk();
-            print(f"Vigenere cipher key: {key}")
-            if(task == "encrypt"):
-                result = ve(params, key)
-            #if(task == "decrypt"):
-            #    result = vd(params, key)
-        if(ciphername == "caesar"):    
-            from caesarcipher import CaesarCipher as cc
-            ccobj = None
-            if(not key):
-                ccobj = cc(params, offset=14)
-            else:
-                ccobj = cc(params, offset=int(key))
-            if(task == "encrypt"):
-                result = ccobj.encoded
-            if(task == "decrypt"):
-                result = ccobj.decoded
-
-        if(ciphername == "rot" or ciphername == "rot13"):
-            if(not key or ciphername == "rot13"):
-                key = 13;
-            else:
-                if(task == "encrypt"):
-                    key = int(key)
-                else:
-                    key =  26 - int(key);
-            from string import ascii_lowercase as lc, ascii_uppercase as uc
-            translator = str.maketrans(lc + uc, lc[key:] + lc[:key] + uc[key:] + uc[:key])
-            result = params.translate(translator)
-
-        return result
-        
 # If there is a Hash Input, hence there has to be a Hash Type i.e. "hashType" is TRUE. There may/may not be any file.
 # It supports md5', 'sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'blake2b', 'blake2s'.
 # It also supports 'sha3_224', 'sha3_256', 'sha3_384', 'sha3_512', 'shake_128', 'shake_256.
@@ -170,9 +130,6 @@ def main():
     optional.add_argument('-e', help='Encoding type. eg: ibm037 , utf8 , utf16 , utf32 , etc', dest='enc')
     optional.add_argument('-hash', help='Enable Hash Input', dest='hash')
     optional.add_argument('-f', help='Enable File Input', dest='fi', action = "store_true")
-    optional.add_argument('-cipher', help='cipher to use', dest='ciphername')
-    optional.add_argument('-key', help='additional info', dest='key')
-    optional.add_argument('-task', help='encrypt or decrypt', dest='task')
     
     print('\n')
 
@@ -183,7 +140,7 @@ def main():
         quit()
 
     print('Input: %s' % (args.str))
-    print('Output: %s' % (paramEncode(params=args.str, charset=args.enc, urlDecodeInput=args.udi, urlEncodeOutput=args.ueo, hashType=args.hash, fileInput=args.fi, key=args.key, ciphername=args.ciphername, task=args.task)))
+    print('Output: %s' % (paramEncode(params=args.str, charset=args.enc, urlDecodeInput=args.udi, urlEncodeOutput=args.ueo, hashType=args.hash, fileInput=args.fi)))
     print('')
     print('_________________________________________________________________________________________________________________________________________')
     print('')
