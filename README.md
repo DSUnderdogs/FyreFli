@@ -1,6 +1,7 @@
 # Fyrefli WAF 
  Everything about web application firewalls (WAFs). 🔥
-<img align="center" alt= "FyreFli" width="500" src="https://media.istockphoto.com/id/1255839320/vector/firefly-vector-icon-illustration.jpg?s=1024x1024&w=is&k=20&c=uS5mO_2WfjgqK2I4q1Y2OyD45A22F9jlHhBZGi2HzUo=">
+ FyreFli is a python based obfuscator made by Anmol along with Suryansh and Sharvil.
+ It can perform a variety of tasks.
 
 __A Concise Definition:__ A web application firewall is a security policy enforcement point positioned between a web application and the client endpoint. This functionality can be implemented in software or hardware, running in an appliance device, or in a typical server running a common operating system. It may be a stand-alone device or integrated into other network components. *(Source: [PCI DSS IS 6.6](https://www.pcisecuritystandards.org/documents/information_supplement_6.6.pdf))*
 
