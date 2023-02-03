@@ -1,5 +1,4 @@
-# Fyrefli WAF 
- Everything about web application firewalls (WAFs). 🔥
+# Fyrefli 
  FyreFli is a python based obfuscator made by Anmol along with Suryansh and Sharvil.
  It can perform a variety of tasks.
 
@@ -41,6 +40,7 @@ Feel free to [contribute](CONTRIBUTING.md).
 - [Licensing & Credits](#credits--license)
 
 ## Introduction:
+ Everything about web application firewalls (WAFs). 🔥
 ### How WAFs Work:
 - Using a set of rules to distinguish between normal requests and malicious requests.
 - Sometimes they use a learning mode to add rules automatically through learning about user behaviour.
