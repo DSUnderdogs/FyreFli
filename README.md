@@ -3,7 +3,7 @@
  FyreFli is a python based obfuscator made by Anmol along with Suryansh and Sharvil.
  It can perform a variety of tasks.
 
- Contributions - 
+ __Contributions - __ 
  Anmol Vats : Python Script i.e. obfu.py file
  Sharvil Bhatt : R & D, DS Underdogs Webpage and Web-Development
  Suryansh Arya : API, All scripts/codes in JS.
