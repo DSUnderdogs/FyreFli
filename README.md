@@ -2,6 +2,8 @@
 FyreFli is a python based obfuscator made by Anmol along with Suryansh and Sharvil. It can perform a variety of tasks. 
 ### Contributions - 
 __Anmol Vats :__ Python Script i.e. obfu.py file ; __Sharvil Bhatt :__ R & D, DS Underdogs Webpage and Web-Development ; __Suryansh Arya :__ API, All scripts/codes in JS. 
+
+Our website [dsundergods.website](https://dsunderdogs.github.io/websitedsunder.github.io/)
 ### A Concise Definition: 
 FyreFli is a python based obfuscator. It can do a variety of tasks from encoding to encryption to obfuscation; from unicode character encoding methods like utf8, utf16 to hash functions like sha3-256, md5. 
 
@@ -83,6 +85,6 @@ Output: %97%81%99%81%94~L%A2%A5%87a%96%95%93%96%81%84~%97%99%96%94%97%A3M%5Daa
 ```
 
 ### Sidenote:
-Our website [dsundergods.website](https://dsunderdogs.github.io/websitedsunder.github.io/)
+
 This script can encode in all types of formats which are supported by the Python Engine.
 Made by Anmol Vats, Suryansh Arya, Sharvil Bhatt under the team/flagship of DS Underdogs.
