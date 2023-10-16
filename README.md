@@ -84,4 +84,4 @@ Output: %97%81%99%81%94~L%A2%A5%87a%96%95%93%96%81%84~%97%99%96%94%97%A3M%5Daa
 
 ### Sidenote:
 This script can encode in all types of formats which are supported by the Python Engine.
-Made by Anmol Vats along with Suryansh Arya, Sharvil Bhatt under the team/flagship of DS Underdogs.
+Made by Anmol Vats, Suryansh Arya, Sharvil Bhatt under the team/flagship of DS Underdogs.
